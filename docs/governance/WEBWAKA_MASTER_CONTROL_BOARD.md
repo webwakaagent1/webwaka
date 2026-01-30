@@ -2,11 +2,15 @@
 
 **CANONICAL LIVING GOVERNANCE DOCUMENT**
 
-**Version:** 5.0 (Wave 2 Complete)  
+**Version:** 5.1 (Wave 3 Pending Ratification)  
 **Last Updated:** January 30, 2026  
 **Authority:** Founder
 
+> **Wave 3 Pending Ratification:** Four phases (PF-3, CB-1, ID-1, ID-3) have been identified for Wave 3 parallel execution. Draft v2 PaA prompts have been prepared and are awaiting Founder authorization.
+
 > **Wave 2 Execution Complete:** Both Wave 2 phases (PF-2 and CS-4) have been implemented, verified, and are now operational. The platform has achieved significant milestones in its foundational infrastructure and core service layers.
+
+> **CB-4 Governance Gap:** Phase CB-4 (Inventory Management Capability) is referenced as a dependency for SC-1 and SC-3 but is not defined in the Master Control Board. A resolution proposal has been prepared and is awaiting Founder ratification.
 
 > **Repository Topology Decision:** The Founder has ratified a single-repository (monorepo) topology for all platform development. All execution work must occur in the `webwaka` repository under `/implementations/<phase-id>/`. This decision is binding until formally superseded after completion of all Wave 1 phases.
 
@@ -304,7 +308,7 @@ This section tracks planned, but not yet started, phases.
 
 | Axis | Value |
 | :--- | :--- |
-| **Status** | ⚪ **Planned / Not Started** |
+| **Status** | 🔵 **Proposed / Pending Ratification (Wave 3)** |
 | **Platform Layer** | Core Services, Capabilities |
 | **Deployment Mode** | All |
 | **Actor Scope** | All |
@@ -312,9 +316,12 @@ This section tracks planned, but not yet started, phases.
 | **Geographic Assumption** | Global-Ready |
 | **Execution Ownership** | Internal |
 | **Risk Class** | Infrastructure, Business Logic |
-| **Dependencies** | PF-2 |
+| **Dependencies** | PF-2 (🟢 Complete) |
 | **Execution Readiness** | ✅ Fully specifiable now |
 | **Blockers** | None (Decision 7 resolved) |
+| **Assigned Platform** | Manus |
+| **Execution Wave** | Wave 3 (Parallel) |
+| **Draft Prompt** | `/docs/phases/PF-3_AI_HIGH_COMPLEXITY_READINESS.md` |
 | **Objective** | Implement model-agnostic AI job orchestration with multi-LLM support, BYOK at all actor levels (Super Admin, Partner, Client, Merchant/Vendor, Agent, Staff), flexible billing (pay-per-request, pay-per-token, bundled, subscription, caps, free tiers, markup, subsidy), abstract capability contracts (generate, classify, recommend, forecast, negotiate), graceful degradation, and support for free/open-source/low-cost models. Also includes vector DB support and geospatial services. |
 
 ### 7.3. Core Services Expansion Phases
@@ -401,8 +408,7 @@ This section tracks planned, but not yet started, phases.
 #### CB-1: MLAS Capability
 
 | Axis | Value |
-| :--- | :--- |
-| **Status** | ⚪ **Planned / Not Started** |
+| :--- | :--- || **Status** | 🔵 **Proposed / Pending Ratification (Wave 3)** |
 | **Platform Layer** | Capabilities |
 | **Deployment Mode** | All |
 | **Actor Scope** | Super Admin, Partner, Client, Merchant/Vendor, Agent, End User |
@@ -410,9 +416,12 @@ This section tracks planned, but not yet started, phases.
 | **Geographic Assumption** | Nigeria-First |
 | **Execution Ownership** | Internal |
 | **Risk Class** | Data, Legal/Compliance |
-| **Dependencies** | CS-1, CS-4 |
+| **Dependencies** | CS-1 (🟢 Complete), CS-4 (🟢 Complete) |
 | **Execution Readiness** | ✅ Fully specifiable now |
-| **Blockers** | None (Decision 4 resolved) |
+| **Blockers** | None |
+| **Assigned Platform** | Manus |
+| **Execution Wave** | Wave 3 (Parallel) |
+| **Draft Prompt** | `/docs/phases/CB-1_MLAS_CAPABILITY.md` |(Decision 4 resolved) |
 | **Objective** | Build MLAS as a configurable revenue-flow infrastructure supporting attribution tracking, commission calculation, payout routing, auditability, dispute resolution hooks, multi-level revenue trees, and support for Platform-First, Partner-Owned, Client-Owned, Zero-Platform-Cut, and Hybrid models |
 
 #### CB-2: Reporting & Analytics Capability
@@ -509,7 +518,7 @@ This section tracks planned, but not yet started, phases.
 
 | Axis | Value |
 | :--- | :--- |
-| **Status** | ⚪ **Planned / Not Started** |
+| **Status** | 🔵 **Proposed / Pending Ratification (Wave 3)** |
 | **Platform Layer** | Foundation, Core Services |
 | **Deployment Mode** | Self-Hosted |
 | **Actor Scope** | Super Admin, Client |
@@ -517,9 +526,12 @@ This section tracks planned, but not yet started, phases.
 | **Geographic Assumption** | Global-Ready |
 | **Execution Ownership** | Internal |
 | **Risk Class** | Infrastructure, Security |
-| **Dependencies** | PF-1 |
+| **Dependencies** | PF-1 (🟢 Complete) |
 | **Execution Readiness** | ✅ Fully specifiable now |
 | **Blockers** | None (Decision 6 resolved) |
+| **Assigned Platform** | Manus |
+| **Execution Wave** | Wave 3 (Parallel) |
+| **Draft Prompt** | `/docs/phases/ID-1_ENTERPRISE_DEPLOYMENT_AUTOMATION.md` |
 | **Objective** | Automate the "Compile & Deploy" pipeline for self-hosted enterprise instances with Update Channel Policy enforcement (auto-update, manual-approval, frozen), version pinning at platform/suite/capability levels, security patch enforcement, and rollback support via deployment manifest versioning |
 
 #### ID-2: Partner Whitelabel Deployment
@@ -543,7 +555,7 @@ This section tracks planned, but not yet started, phases.
 
 | Axis | Value |
 | :--- | :--- |
-| **Status** | ⚪ **Planned / Not Started** |
+| **Status** | 🔵 **Proposed / Pending Ratification (Wave 3)** |
 | **Platform Layer** | Foundation, Core Services |
 | **Deployment Mode** | All |
 | **Actor Scope** | Super Admin, Partner, Client |
@@ -551,9 +563,12 @@ This section tracks planned, but not yet started, phases.
 | **Geographic Assumption** | Global-Ready |
 | **Execution Ownership** | Internal |
 | **Risk Class** | Infrastructure, Legal/Compliance |
-| **Dependencies** | PF-1 |
+| **Dependencies** | PF-1 (🟢 Complete) |
 | **Execution Readiness** | ✅ Fully specifiable now |
 | **Blockers** | None (Decision 5 resolved) |
+| **Assigned Platform** | Manus |
+| **Execution Wave** | Wave 3 (Parallel) |
+| **Draft Prompt** | `/docs/phases/ID-3_GLOBAL_EXPANSION_MULTI_REGION.md` |
 | **Objective** | Deploy the platform to multiple AWS regions with configurable data residency (Single-Country, Regional, Hybrid, Fully Sovereign, Client-Owned Sovereignty modes), data classification enforcement (Identity, Transactional, Operational, Content, Analytical/Derived), and cross-border access controls (explicit, logged, auditable, revocable) |
 
 ---
