@@ -1,6 +1,6 @@
 # ID-1: Enterprise Deployment Automation
 
-**DRAFT — AWAITING AUTHORIZATION**
+**Status:** 🟡 **Authorized for Execution (Wave 3)**
 
 ---
 
@@ -46,4 +46,4 @@ You are to implement the Enterprise Deployment Automation phase as defined in th
 
 ---
 
-**This prompt is a DRAFT and is not yet authorized for execution.**
+

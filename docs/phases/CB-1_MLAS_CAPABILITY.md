@@ -1,6 +1,6 @@
 # CB-1: MLAS Capability
 
-**DRAFT — AWAITING AUTHORIZATION**
+**Status:** 🟡 **Authorized for Execution (Wave 3)**
 
 ---
 
@@ -47,4 +47,4 @@ You are to implement the MLAS Capability as defined in the objective above. This
 
 ---
 
-**This prompt is a DRAFT and is not yet authorized for execution.**
+
