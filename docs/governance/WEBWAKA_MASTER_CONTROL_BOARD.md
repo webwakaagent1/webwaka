@@ -284,7 +284,11 @@ This section tracks planned, but not yet started, phases.
 
 | Axis | Value |
 | :--- | :--- |
-| **Status** | 🟡 **Authorized for Execution (Wave 2)** |
+| **Status** | 🟢 **Complete** |
+| **Completion Date** | January 30, 2026 |
+| **Commit SHA** | 862bbfae43c80f4e386222b5bec07f72bea6a00d |
+| **Architecture** | `/docs/architecture/ARCH_PF2_REALTIME_EVENTING.md` |
+| **Implementation** | `/implementations/pf2-realtime-eventing-infrastructure/` |
 | **Platform Layer** | Core Services, Capabilities |
 | **Deployment Mode** | All |
 | **Actor Scope** | All |
