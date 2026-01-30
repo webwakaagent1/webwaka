@@ -1,23 +1,40 @@
-# WebWaka PF-1 Foundational Extensions
+# WebWaka Platform - Wave 1 Capabilities
 
 ## Overview
 
-WebWaka Platform Foundation Phase 1 - Foundational Extensions. This is a Node.js/TypeScript backend API that provides infrastructure for stateful compute, instance orchestration, and the Super Admin control plane.
+WebWaka B2B SaaS platform with multi-tenancy, implementing reusable capabilities following the Prompts-as-Artifacts (PaA) governance model. Wave 1 includes CB-2 Reporting & Analytics and CB-3 Content Management capabilities.
 
-## Project Structure
+## Active Capability: CB-2 Reporting & Analytics
 
-```
-implementations/pf1-foundational-extensions/
-├── src/
-│   ├── config/         # Database and Redis configuration
-│   ├── models/         # Data models (Instance, Job, AuditLog)
-│   ├── services/       # Business logic services
-│   ├── utils/          # Logger and utilities
-│   └── index.ts        # Express API entry point
-├── migrations/         # SQL migration files
-├── tests/              # Unit and integration tests
-└── package.json
-```
+Located at: `implementations/CB-2_REPORTING_ANALYTICS_CAPABILITY/`
+
+### Features
+- **Data Aggregation Engine**: Real-time and batch aggregation with multiple granularities (minute to year)
+- **Flexible Query API**: Filters, grouping, sorting, pagination, date range presets
+- **10 Pre-built Reports**: Sales Summary, Inventory Status, User Activity, Financial Overview, Top Products, Customer Segments, Revenue Trends, Conversion Funnel, Geographic Distribution, Performance Metrics
+- **Dashboard Framework**: 5 widget types (line_chart, bar_chart, pie_chart, table, kpi_card)
+- **Multi-format Export**: CSV, Excel, PDF
+
+### API Endpoints
+- `GET /` - API info
+- `GET /health` - Health check
+- `POST /api/v1/metrics` - Record metric
+- `GET /api/v1/metrics?tenantId=` - List metrics
+- `POST /api/v1/query` - Execute flexible query
+- `GET /api/v1/reports?tenantId=` - List reports
+- `POST /api/v1/dashboards` - Create dashboard
+- `POST /api/v1/export` - Export data
+
+## Available Capability: CB-3 Content Management
+
+Located at: `implementations/CB-3_CONTENT_MANAGEMENT_CAPABILITY/`
+
+### Features
+- Flexible schema-driven content model (11 field types)
+- Media management with validation
+- Version history for all content
+- Configurable workflows (3 system workflows)
+- Multi-language localization support
 
 ## Technology Stack
 
@@ -25,39 +42,32 @@ implementations/pf1-foundational-extensions/
 - **Language**: TypeScript 5.x
 - **Framework**: Express.js 4.x
 - **Database**: PostgreSQL (Replit Postgres)
-- **Cache/Queue**: Redis (optional - not configured in Replit)
-- **Job Queue**: BullMQ (requires Redis)
+- **Export Libraries**: ExcelJS, PDFKit
 
-## Running the Application
+## Platform Invariants Enforced
 
-The application runs on port 5000 with the following endpoints:
-
-- `GET /` - API info
-- `GET /health` - Health check
-- `GET /api/v1/instances` - List instances
-- `GET /api/v1/instances/:id` - Get instance by ID
-- `GET /api/v1/audit-logs` - List audit logs
-
-## Environment Variables
-
-The application uses Replit's built-in environment variables:
-- `DATABASE_URL` - PostgreSQL connection string (auto-configured)
-- `PGHOST`, `PGPORT`, `PGUSER`, `PGPASSWORD`, `PGDATABASE` - Individual PG config
-
-Optional Redis configuration:
-- `REDIS_URL` or `REDIS_HOST`/`REDIS_PORT` - Redis connection (disabled by default)
-- `REDIS_ENABLED=false` - Explicitly disable Redis
+- **INV-002**: Strict tenant isolation (all tables have tenant_id, all queries filter by tenant)
+- **INV-005**: Partner-led operating model (partners can create custom reports, dashboards)
+- **INV-011**: Prompts-as-Artifacts execution (documented in governance docs)
 
 ## Development
 
 ```bash
-cd implementations/pf1-foundational-extensions
+# CB-2 Reporting & Analytics
+cd implementations/CB-2_REPORTING_ANALYTICS_CAPABILITY
 npm install
-npm run dev
+npm run dev   # Runs on port 5000
+npm test      # 55 tests
+
+# CB-3 Content Management
+cd implementations/CB-3_CONTENT_MANAGEMENT_CAPABILITY
+npm install
+npm run dev   # Runs on port 5000
+npm test      # 33 tests
 ```
 
-## Deployment
+## Architecture Documentation
 
-The application is configured for autoscale deployment:
-- Build: `npm run build` (compiles TypeScript)
-- Run: `node dist/index.js`
+- [CB-2 Architecture](/docs/architecture/ARCH_CB2_REPORTING_ANALYTICS.md)
+- [CB-3 Architecture](/docs/architecture/ARCH_CB3_CONTENT_MANAGEMENT.md)
+- [Master Control Board](/docs/governance/WEBWAKA_MASTER_CONTROL_BOARD.md)

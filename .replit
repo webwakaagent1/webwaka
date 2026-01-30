@@ -15,19 +15,19 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "CB-3 Content Management"
+args = "CB-2 Reporting & Analytics"
 
 [[workflows.workflow]]
-name = "CB-3 Content Management"
+name = "CB-2 Reporting & Analytics"
 author = "agent"
-
-[workflows.workflow.metadata]
-outputType = "webview"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "cd implementations/CB-3_CONTENT_MANAGEMENT_CAPABILITY && npm run dev"
+args = "cd implementations/CB-2_REPORTING_ANALYTICS_CAPABILITY && npm run dev"
 waitForPort = 5000
+
+[workflows.workflow.metadata]
+outputType = "webview"
 
 [[ports]]
 localPort = 5000
