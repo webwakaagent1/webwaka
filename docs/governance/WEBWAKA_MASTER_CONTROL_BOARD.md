@@ -2,15 +2,15 @@
 
 **CANONICAL LIVING GOVERNANCE DOCUMENT**
 
-**Version:** 5.1 (Wave 3 Pending Ratification)  
+**Version:** 5.2 (Wave 3 Planning Complete)  
 **Last Updated:** January 30, 2026  
 **Authority:** Founder
 
-> **Wave 3 Pending Ratification:** Four phases (PF-3, CB-1, ID-1, ID-3) have been identified for Wave 3 parallel execution. Draft v2 PaA prompts have been prepared and are awaiting Founder authorization.
+> **Wave 3 Planning Complete:** Five phases (PF-3, CB-1, CB-4, ID-1, ID-3) have been identified for Wave 3 parallel execution. All planning artifacts have been prepared and are awaiting Founder ratification.
+
+> **CB-4 Governance Gap Resolved:** Phase CB-4 (Inventory Management Capability) has been formally added to the Master Control Board. This phase was previously referenced in canonical documents but was missing from the Control Board.
 
 > **Wave 2 Execution Complete:** Both Wave 2 phases (PF-2 and CS-4) have been implemented, verified, and are now operational. The platform has achieved significant milestones in its foundational infrastructure and core service layers.
-
-> **CB-4 Governance Gap:** Phase CB-4 (Inventory Management Capability) is referenced as a dependency for SC-1 and SC-3 but is not defined in the Master Control Board. A resolution proposal has been prepared and is awaiting Founder ratification.
 
 > **Repository Topology Decision:** The Founder has ratified a single-repository (monorepo) topology for all platform development. All execution work must occur in the `webwaka` repository under `/implementations/<phase-id>/`. This decision is binding until formally superseded after completion of all Wave 1 phases.
 
@@ -459,6 +459,25 @@ This section tracks planned, but not yet started, phases.
 | **Blockers** | None |
 | **Assigned Platform** | Replit |
 | **Execution Wave** | Wave 1 (Parallel) |
+| **Objective** | Build a channel-agnostic content management capability that supports rich text, images, videos, and documents. Must support versioning, approval workflows, and multi-language content. |
+
+#### CB-4: Inventory Management Capability
+
+| Axis | Value |
+| :--- | :--- |
+| **Status** | ⚪ **Planned / Not Started** |
+| **Platform Layer** | Capabilities |
+| **Deployment Mode** | All |
+| **Actor Scope** | Partner, Client, Merchant/Vendor |
+| **Connectivity Mode** | Offline-First, Degraded/Intermittent, Fully Online |
+| **Geographic Assumption** | Nigeria-First |
+| **Execution Ownership** | Internal |
+| **Risk Class** | Data, Business Logic |
+| **Dependencies** | PF-1 (🟢 Complete) |
+| **Execution Readiness** | ✅ Fully specifiable now |
+| **Blockers** | None |
+| **Objective** | Build a channel-agnostic inventory management capability that serves as the single source of truth for inventory. Sales channels will subscribe to this capability. |
+
 ### 7.5. Suite Construction Phases
 
 #### SC-1: Commerce Suite V1
