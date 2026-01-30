@@ -38,7 +38,7 @@ This capability will deliver the following features:
 
 ## 4. Architectural Principles & Alignment
 
-This capability must adhere to all 10 platform invariants, with particular emphasis on:
+This capability must adhere to all platform invariants, with particular emphasis on:
 
 | Invariant | Implementation in CB-3 |
 | :--- | :--- |
@@ -70,7 +70,13 @@ This capability must adhere to all 10 platform invariants, with particular empha
 
 ---
 
-## 🚀 EXECUTION PROMPT: Implement Content Management Capability (CB-3)
+## 🚀 EXECUTION PROMPT (DEPRECATED) - v1
+
+> **This prompt is deprecated and should not be used. See v2 below.**
+
+---
+
+## 🚀 EXECUTION PROMPT: Implement Content Management Capability (CB-3-PROMPT-v2)
 
 **Objective:** Build a reusable content management capability (CMS) that allows partners and clients to create, manage, and publish content across the platform.
 
@@ -89,7 +95,7 @@ This capability must adhere to all 10 platform invariants, with particular empha
 **Canonical Governance:**
 - **Master Control Board:** [§7.4 CB-3: Content Management Capability](../governance/WEBWAKA_MASTER_CONTROL_BOARD.md#cb-3-content-management-capability)
 - **Dependencies:** PF-1 (Foundational Extensions)
-- **Platform Invariants:** INV-002, INV-005, INV-007
+- **Platform Invariants:** INV-002, INV-005, INV-007, INV-011
 
 **Deliverables:**
 1. Content model engine deployed and operational
@@ -107,11 +113,53 @@ This capability must adhere to all 10 platform invariants, with particular empha
 
 ---
 
+🚨 **Execution Validity & Closure Requirements (Non-Negotiable)**
+
+This execution is governed by the WebWaka Master Control Board and the Prompts-as-Artifacts (PaA) model.
+
+**1. GitHub Persistence (MANDATORY)**
+- ALL work MUST be committed and pushed to the `webwaka-platform` repository on the `main` branch.
+- Work that is not pushed to GitHub is INVALID and treated as NOT DONE.
+- No local-only, sandbox-only, or conversational work is acceptable.
+
+**2. Evidence Required at Completion**
+
+You MUST provide:
+- Commit SHA(s)
+- List of files added / modified / deleted
+- Links to all relevant documentation (`ARCH_CB3_CONTENT_MANAGEMENT.md`)
+- Confirmation of Master Control Board status update
+
+**3. Control Board Synchronization**
+- The CB-3 status on the Master Control Board MUST be updated to `🟢 Complete` before submission.
+- If it is not reflected on the Control Board, it does not exist.
+
+**4. Scope Discipline**
+- You MUST NOT modify anything outside the explicitly defined scope.
+- Any deviation requires explicit Founder approval.
+
+**5. Failure Handling**
+- If blocked, you MUST document the blocker in a new `CB3_BLOCKER.md` file and stop.
+- Partial, silent, or undocumented completion is prohibited.
+
+**6. Closure Rule**
+
+Execution is considered complete ONLY when:
+- Code + docs are pushed to GitHub
+- Evidence is provided in a completion report
+- Control Board is updated
+- Verifier (Primary Manus) has acknowledged receipt
+
+Failure to meet any of the above invalidates the execution.
+
+---
+
 ## 7. Status & History
 
 | Date | Status | Notes |
 | :--- | :--- | :--- |
-| January 30, 2026 | ⚪ Planned / Not Started | Phase defined with embedded execution prompt. Awaiting execution assignment. |
+| January 30, 2026 | ⚪ Planned / Not Started | Phase defined with embedded execution prompt. |
+| January 30, 2026 | 🔴 Governance Hardening | Prompt v1 deprecated. Prompt v2 created with mandatory invariants. |
 
 ---
 

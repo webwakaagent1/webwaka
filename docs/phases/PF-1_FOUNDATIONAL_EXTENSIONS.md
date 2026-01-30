@@ -37,7 +37,7 @@ This phase will deliver the following foundational capabilities:
 
 ## 4. Architectural Principles & Alignment
 
-This phase must adhere to all 10 platform invariants, with particular emphasis on:
+This phase must adhere to all platform invariants, with particular emphasis on:
 
 | Invariant | Implementation in PF-1 |
 | :--- | :--- |
@@ -69,7 +69,13 @@ This phase must adhere to all 10 platform invariants, with particular emphasis o
 
 ---
 
-## 🚀 EXECUTION PROMPT: Implement Foundational Extensions (PF-1)
+## 🚀 EXECUTION PROMPT (DEPRECATED) - v1
+
+> **This prompt is deprecated and should not be used. See v2 below.**
+
+---
+
+## 🚀 EXECUTION PROMPT: Implement Foundational Extensions (PF-1-PROMPT-v2)
 
 **Objective:** Implement the foundational platform extensions required to support stateful compute, instance orchestration, and the Super Admin control plane.
 
@@ -89,7 +95,7 @@ This phase must adhere to all 10 platform invariants, with particular emphasis o
 **Canonical Governance:**
 - **Master Control Board:** [§7.2 PF-1: Foundational Extensions](../governance/WEBWAKA_MASTER_CONTROL_BOARD.md#pf-1-foundational-extensions)
 - **Dependencies:** Phase 2B (Complete)
-- **Platform Invariants:** INV-002, INV-003, INV-004, INV-008
+- **Platform Invariants:** INV-002, INV-003, INV-004, INV-008, INV-011
 
 **Deliverables:**
 1. Stateful compute infrastructure deployed and operational
@@ -107,12 +113,54 @@ This phase must adhere to all 10 platform invariants, with particular emphasis o
 
 ---
 
+🚨 **Execution Validity & Closure Requirements (Non-Negotiable)**
+
+This execution is governed by the WebWaka Master Control Board and the Prompts-as-Artifacts (PaA) model.
+
+**1. GitHub Persistence (MANDATORY)**
+- ALL work MUST be committed and pushed to the `webwaka-platform` repository on the `main` branch.
+- Work that is not pushed to GitHub is INVALID and treated as NOT DONE.
+- No local-only, sandbox-only, or conversational work is acceptable.
+
+**2. Evidence Required at Completion**
+
+You MUST provide:
+- Commit SHA(s)
+- List of files added / modified / deleted
+- Links to all relevant documentation (`ARCH_PF1_FOUNDATIONAL_EXTENSIONS.md`)
+- Confirmation of Master Control Board status update
+
+**3. Control Board Synchronization**
+- The PF-1 status on the Master Control Board MUST be updated to `🟢 Complete` before submission.
+- If it is not reflected on the Control Board, it does not exist.
+
+**4. Scope Discipline**
+- You MUST NOT modify anything outside the explicitly defined scope.
+- Any deviation requires explicit Founder approval.
+
+**5. Failure Handling**
+- If blocked, you MUST document the blocker in a new `PF1_BLOCKER.md` file and stop.
+- Partial, silent, or undocumented completion is prohibited.
+
+**6. Closure Rule**
+
+Execution is considered complete ONLY when:
+- Code + docs are pushed to GitHub
+- Evidence is provided in a completion report
+- Control Board is updated
+- Verifier (Primary Manus) has acknowledged receipt
+
+Failure to meet any of the above invalidates the execution.
+
+---
+
 ## 7. Status & History
 
 | Date | Status | Notes |
 | :--- | :--- | :--- |
 | January 30, 2026 | ⚪ Planned / Not Started | Phase defined with embedded execution prompt. |
 | January 30, 2026 | 🟡 Authorized for Execution | Founder authorized PF-1 for execution. PaA link prepared and ready for dispatch. |
+| January 30, 2026 | 🔴 Governance Hardening | Prompt v1 deprecated. Prompt v2 created with mandatory invariants. |
 
 ---
 

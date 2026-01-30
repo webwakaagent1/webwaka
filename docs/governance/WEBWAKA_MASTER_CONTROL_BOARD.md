@@ -2,9 +2,11 @@
 
 **CANONICAL LIVING GOVERNANCE DOCUMENT**
 
-**Version:** 3.0 (PaA Model Ratified)  
+**Version:** 3.1 (Governance Hardening)  
 **Last Updated:** January 30, 2026  
 **Authority:** Founder
+
+> **Governance Hardening Event:** All PaA execution prompts have been audited and patched with mandatory invariants. The Prompt Invariant Checklist is now enforced for all future prompts.
 
 > This document is the single source of truth for platform state, execution status, governance visibility, historical record, and forward roadmap. No other document should attempt to summarize the platform lifecycle at this level. Any activity not reflected here is considered unofficial.
 
