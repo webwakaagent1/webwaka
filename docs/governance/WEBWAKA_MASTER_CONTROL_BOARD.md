@@ -313,7 +313,7 @@ This section tracks planned, but not yet started, phases.
 
 | Axis | Value |
 | :--- | :--- |
-| **Status** | ⚪ **Planned / Not Started** |
+| **Status** | 🟡 **Authorized for Execution (Wave 1 Parallel)** |
 | **Platform Layer** | Core Services |
 | **Deployment Mode** | All |
 | **Actor Scope** | Super Admin, Partner |
@@ -324,12 +324,14 @@ This section tracks planned, but not yet started, phases.
 | **Dependencies** | PF-1 |
 | **Execution Readiness** | ✅ Fully specifiable now |
 | **Blockers** | None |
+| **Assigned Platform** | Manus |
+| **Execution Wave** | Wave 1 (Parallel) |
 
 #### CS-2: Notification Service
 
 | Axis | Value |
 | :--- | :--- |
-| **Status** | ⚪ **Planned / Not Started** |
+| **Status** | 🟡 **Authorized for Execution (Wave 1 Parallel)** |
 | **Platform Layer** | Core Services |
 | **Deployment Mode** | All |
 | **Actor Scope** | All |
@@ -340,11 +342,14 @@ This section tracks planned, but not yet started, phases.
 | **Dependencies** | PF-1 |
 | **Execution Readiness** | ✅ Fully specifiable now |
 | **Blockers** | None |
+| **Assigned Platform** | Replit |
+| **Execution Wave** | Wave 1 (Parallel) |
 
 #### CS-3: Identity & Access Management V2
 
 | Axis | Value |
 | :--- | :--- |
+| **Status** | 🟡 **Authorized for Execution (Wave 1 Parallel)** |
 | **Phase ID** | CS-3 |
 | **Phase Name** | Identity & Access Management V2 |
 | **Objective** | Implement advanced IAM features (e.g., social login, 2FA) |
@@ -358,6 +363,8 @@ This section tracks planned, but not yet started, phases.
 | **Dependencies** | Phase 2B |
 | **Execution Readiness** | ✅ Fully specifiable now |
 | **Blockers** | None |
+| **Assigned Platform** | Manus |
+| **Execution Wave** | Wave 1 (Parallel) |
 
 #### CS-4: Pricing & Billing Service
 
@@ -414,7 +421,7 @@ This section tracks planned, but not yet started, phases.
 
 | Axis | Value |
 | :--- | :--- |
-| **Status** | ⚪ **Planned / Not Started** |
+| **Status** | 🟡 **Authorized for Execution (Wave 1 Parallel)** |
 | **Platform Layer** | Capabilities |
 | **Deployment Mode** | All |
 | **Actor Scope** | Partner, Client |
@@ -425,12 +432,14 @@ This section tracks planned, but not yet started, phases.
 | **Dependencies** | PF-1 |
 | **Execution Readiness** | ✅ Fully specifiable now |
 | **Blockers** | None |
+| **Assigned Platform** | Replit |
+| **Execution Wave** | Wave 1 (Parallel) |
 
 #### CB-3: Content Management Capability
 
 | Axis | Value |
 | :--- | :--- |
-| **Status** | ⚪ **Planned / Not Started** |
+| **Status** | 🟡 **Authorized for Execution (Wave 1 Parallel)** |
 | **Platform Layer** | Capabilities |
 | **Deployment Mode** | All |
 | **Actor Scope** | Partner, Client |
@@ -441,6 +450,8 @@ This section tracks planned, but not yet started, phases.
 | **Dependencies** | PF-1 |
 | **Execution Readiness** | ✅ Fully specifiable now |
 | **Blockers** | None |
+| **Assigned Platform** | Replit |
+| **Execution Wave** | Wave 1 (Parallel) |
 
 ### 7.5. Suite Construction Phases
 
