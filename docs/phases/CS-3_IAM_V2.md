@@ -118,7 +118,8 @@ This phase must adhere to all platform invariants, with particular emphasis on:
 This execution is governed by the WebWaka Master Control Board and the Prompts-as-Artifacts (PaA) model.
 
 **1. GitHub Persistence (MANDATORY)**
-- ALL work MUST be committed and pushed to the `webwaka-platform` repository on the `main` branch.
+- ALL work MUST be committed and pushed to the `webwaka` repository on the `main` branch.
+- Implementation code MUST be placed in `/implementations/CS-3_IAM_V2/`.
 - Work that is not pushed to GitHub is INVALID and treated as NOT DONE.
 - No local-only, sandbox-only, or conversational work is acceptable.
 

@@ -2,9 +2,11 @@
 
 **CANONICAL LIVING GOVERNANCE DOCUMENT**
 
-**Version:** 3.1 (Governance Hardening)  
+**Version:** 3.2 (Repository Topology Ratification)  
 **Last Updated:** January 30, 2026  
 **Authority:** Founder
+
+> **Repository Topology Decision:** The Founder has ratified a single-repository (monorepo) topology for all platform development. All execution work must occur in the `webwaka` repository under `/implementations/<phase-id>/`. This decision is binding until formally superseded after completion of all Wave 1 phases.
 
 > **Governance Hardening Event:** All PaA execution prompts have been audited and patched with mandatory invariants. The Prompt Invariant Checklist is now enforced for all future prompts.
 
@@ -72,6 +74,7 @@ Every tracked item must clearly indicate its position across these seven axes:
 *   **INV-009: AI as Optional Pluggable Capability.** AI is treated as a pluggable, optional, configurable platform capability, never a hard dependency. The platform must support multiple AI models, multiple billing models, and multiple ownership models simultaneously. Bring Your Own Keys (BYOK) is supported at all actor levels. AI pricing is flexible and configurable per actor. AI is accessed via abstract capability contracts, never directly. Core workflows must function without AI, and no AI dependency may block critical operations.
 *   **INV-010: Realtime as Optional Degradable Capability.** Nothing in WebWaka may require realtime connectivity to function correctly. Realtime enhances experiences—it must never gate correctness, safety, or transaction completion. The platform must support four realtime interaction classes (Live Presence, Event Streaming, Low-Latency Interactions, Critical Transactions). Every realtime feature must define its fallback behavior. Realtime loss must degrade UX, never break correctness.
 *   **INV-011: Prompts-as-Artifacts (PaA) Execution.** All work must be initiated via a version-controlled, embedded Execution Prompt within a canonical governance document. Ad-hoc, chat-based instructions are non-binding. Execution is not complete until all artifacts are committed and the originating prompt is updated with backlinks. If it isn't documented in a prompt, it didn't happen.
+*   **INV-012: Single-Repository Topology (Temporary).** All platform development must occur in the canonical `webwaka` repository (`https://github.com/webwakaagent1/webwaka`) on the `main` branch. Implementation code must be placed in `/implementations/<phase-id>/`. This invariant is temporary and will be superseded by a multi-repository model after completion of all Wave 1 phases (CS-1, CS-2, CS-3, CB-2, CB-3). Any prompt referencing `webwaka-platform` or other repositories is invalid until this invariant is superseded.
 
 ---
 
