@@ -2,17 +2,17 @@
 
 **CANONICAL LIVING GOVERNANCE DOCUMENT**
 
-**VVersion: 7.0 (Wave 3 Complete))  
+**Version: 8.0 (Repository Topology Migration Approved)**  
 **Last Updated:** January 30, 2026  
 **Authority:** Founder
+
+> **Repository Topology Migration Approved:** The Founder has approved the migration from single-repository (INV-012) to multi-repository topology (INV-012v2). INV-012 has been formally retired. The migration will proceed in six phases under the governance of the `webwaka-governance` repository. All planning documents are located in `/docs/planning/repository-topology-migration/`. Migration execution will begin with Phase 1 (Governance Repository Creation).
 
 > **Wave 3 Execution Complete:** All five Wave 3 phases (PF-3, CB-1, CB-4, ID-1, ID-3) have been implemented, verified, and are now operational. The platform has achieved significant milestones in its AI readiness, MLAS capability, inventory management, and deployment automation.
 
 > **CB-4 Governance Gap Resolved:** Phase CB-4 (Inventory Management Capability) has been formally added to the Master Control Board. This phase was previously referenced in canonical documents but was missing from the Control Board.
 
 > **Wave 2 Execution Complete:** Both Wave 2 phases (PF-2 and CS-4) have been implemented, verified, and are now operational. The platform has achieved significant milestones in its foundational infrastructure and core service layers.
-
-> **Repository Topology Decision:** The Founder has ratified a single-repository (monorepo) topology for all platform development. All execution work must occur in the `webwaka` repository under `/implementations/<phase-id>/`. This decision is binding until formally superseded after completion of all Wave 1 phases.
 
 > **Governance Hardening Event:** All PaA execution prompts have been audited and patched with mandatory invariants. The Prompt Invariant Checklist is now enforced for all future prompts.
 
@@ -80,7 +80,8 @@ Every tracked item must clearly indicate its position across these seven axes:
 *   **INV-009: AI as Optional Pluggable Capability.** AI is treated as a pluggable, optional, configurable platform capability, never a hard dependency. The platform must support multiple AI models, multiple billing models, and multiple ownership models simultaneously. Bring Your Own Keys (BYOK) is supported at all actor levels. AI pricing is flexible and configurable per actor. AI is accessed via abstract capability contracts, never directly. Core workflows must function without AI, and no AI dependency may block critical operations.
 *   **INV-010: Realtime as Optional Degradable Capability.** Nothing in WebWaka may require realtime connectivity to function correctly. Realtime enhances experiences—it must never gate correctness, safety, or transaction completion. The platform must support four realtime interaction classes (Live Presence, Event Streaming, Low-Latency Interactions, Critical Transactions). Every realtime feature must define its fallback behavior. Realtime loss must degrade UX, never break correctness.
 *   **INV-011: Prompts-as-Artifacts (PaA) Execution.** All work must be initiated via a version-controlled, embedded Execution Prompt within a canonical governance document. Ad-hoc, chat-based instructions are non-binding. Execution is not complete until all artifacts are committed and the originating prompt is updated with backlinks. If it isn't documented in a prompt, it didn't happen.
-*   **INV-012: Single-Repository Topology (Temporary).** All platform development must occur in the canonical `webwaka` repository (`https://github.com/webwakaagent1/webwaka`) on the `main` branch. Implementation code must be placed in `/implementations/<phase-id>/`. This invariant is temporary and will be superseded by a multi-repository model after completion of all Wave 1 phases (CS-1, CS-2, CS-3, CB-2, CB-3). Any prompt referencing `webwaka-platform` or other repositories is invalid until this invariant is superseded.
+*   **INV-012: Single-Repository Topology (RETIRED).** ⛔ **RETIRED as of January 30, 2026.** This invariant served its purpose during Waves 1-3 and has been formally superseded by INV-012v2. All platform development previously occurred in the canonical `webwaka` repository (`https://github.com/webwakaagent1/webwaka`) on the `main` branch. This repository has been archived and is now read-only for historical reference.
+*   **INV-012v2: Multi-Repository Topology.** 🔒 **RATIFIED January 30, 2026.** All platform development must occur in the appropriate layer-specific repository (`webwaka-governance`, `webwaka-platform-foundation`, `webwaka-core-services`, `webwaka-capabilities`, `webwaka-infrastructure`, `webwaka-suites`). Implementation code must be placed in `/implementations/<phase-id>/` within the appropriate repository. All repositories are governed by the `webwaka-governance` repository, which serves as the supreme source of truth for the Master Control Board, platform invariants, PaA Model, and all planning documents.
 
 ---
 
@@ -599,6 +600,29 @@ This section tracks planned, but not yet started, phases.
 | **Execution Wave** | Wave 3 (Parallel) |
 | **Execution Prompt** | `/docs/phases/ID-3_GLOBAL_EXPANSION_MULTI_REGION.md` |
 | **Objective** | Deploy the platform to multiple AWS regions with configurable data residency (Single-Country, Regional, Hybrid, Fully Sovereign, Client-Owned Sovereignty modes), data classification enforcement (Identity, Transactional, Operational, Content, Analytical/Derived), and cross-border access controls (explicit, logged, auditable, revocable) |
+
+### 7.7. Repository Topology Migration
+
+#### REPO-MIG-1: Repository Topology Migration (Planning & Execution)
+
+| Axis | Value |
+| :--- | :--- |
+| **Status** | 🟡 **Planning Complete - Execution Approved** |
+| **Platform Layer** | Governance, Infrastructure |
+| **Deployment Mode** | All (affects all deployment modes) |
+| **Actor Scope** | Super Admin (migration executor) |
+| **Connectivity Mode** | N/A (infrastructure change) |
+| **Geographic Assumption** | Global-Ready |
+| **Execution Ownership** | Manus |
+| **Risk Class** | Infrastructure, Governance |
+| **Dependencies** | Wave 3 Complete (✅), All active execution frozen during migration |
+| **Execution Readiness** | ✅ Fully planned and approved |
+| **Blockers** | None (all Founder decisions approved) |
+| **Assigned Platform** | Manus |
+| **Planning Documents** | `/docs/planning/repository-topology-migration/` |
+| **Migration Phases** | 6 phases (Governance, Foundation & Infra, Core Services, Capabilities, Suites, Archival) |
+| **Estimated Duration** | 4-6 weeks (including approval gates) |
+| **Objective** | Migrate from single-repository (INV-012) to multi-repository topology (INV-012v2) with six layer-specific repositories (`webwaka-governance`, `webwaka-platform-foundation`, `webwaka-core-services`, `webwaka-capabilities`, `webwaka-infrastructure`, `webwaka-suites`). Preserve complete Git history, strengthen governance, enable true parallel execution, and structurally enforce layered dependencies (INV-004). |
 
 ---
 
