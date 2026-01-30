@@ -62,7 +62,7 @@ Located at: `implementations/CB-3_CONTENT_MANAGEMENT_CAPABILITY/`
 cd implementations/cb4-inventory-management
 npm install
 npm run dev   # Runs on port 5000
-npm test      # 35 tests
+npm test      # 67 tests
 
 # CS-4 Pricing & Billing
 cd implementations/cs4-pricing-billing-service

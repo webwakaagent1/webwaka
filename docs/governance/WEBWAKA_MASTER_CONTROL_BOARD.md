@@ -483,7 +483,7 @@ This section tracks planned, but not yet started, phases.
 | **Assigned Platform** | Replit |
 | **Execution Wave** | Wave 3 |
 | **Completion Date** | January 30, 2026 |
-| **Tests** | 35 passing |
+| **Tests** | 67 passing |
 | **Architecture Doc** | [ARCH_CB4_INVENTORY_MANAGEMENT.md](/docs/architecture/ARCH_CB4_INVENTORY_MANAGEMENT.md) |
 | **API Doc** | [CB4_INVENTORY_API.md](/docs/api/CB4_INVENTORY_API.md) |
 | **Objective** | Build a channel-agnostic inventory management capability that serves as the single source of truth for inventory. Sales channels will subscribe to this capability. |
