@@ -15,15 +15,15 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "CB-2 Reporting & Analytics"
+args = "CS-4 Pricing & Billing"
 
 [[workflows.workflow]]
-name = "CB-2 Reporting & Analytics"
+name = "CS-4 Pricing & Billing"
 author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "cd implementations/CB-2_REPORTING_ANALYTICS_CAPABILITY && npm run dev"
+args = "cd implementations/cs4-pricing-billing-service && npm run dev"
 waitForPort = 5000
 
 [workflows.workflow.metadata]

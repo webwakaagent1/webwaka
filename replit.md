@@ -1,40 +1,45 @@
-# WebWaka Platform - Wave 1 Capabilities
+# WebWaka Platform - Core Services & Capabilities
 
 ## Overview
 
-WebWaka B2B SaaS platform with multi-tenancy, implementing reusable capabilities following the Prompts-as-Artifacts (PaA) governance model. Wave 1 includes CB-2 Reporting & Analytics and CB-3 Content Management capabilities.
+WebWaka B2B SaaS platform with multi-tenancy, implementing reusable capabilities and core services following the Prompts-as-Artifacts (PaA) governance model.
 
-## Active Capability: CB-2 Reporting & Analytics
+## Active Service: CS-4 Pricing & Billing Service
 
-Located at: `implementations/CB-2_REPORTING_ANALYTICS_CAPABILITY/`
+Located at: `implementations/cs4-pricing-billing-service/`
 
 ### Features
-- **Data Aggregation Engine**: Real-time and batch aggregation with multiple granularities (minute to year)
-- **Flexible Query API**: Filters, grouping, sorting, pagination, date range presets
-- **10 Pre-built Reports**: Sales Summary, Inventory Status, User Activity, Financial Overview, Top Products, Customer Segments, Revenue Trends, Conversion Funnel, Geographic Distribution, Performance Metrics
-- **Dashboard Framework**: 5 widget types (line_chart, bar_chart, pie_chart, table, kpi_card)
-- **Multi-format Export**: CSV, Excel, PDF
+- **Multi-Actor Pricing Authority**: Super Admin, Partners, Clients, Merchants, Agents, Staff
+- **Composable Pricing Models**: Flat, Usage-Based, Tiered, Subscription, Revenue-Share, Hybrid
+- **Decoupled Billing Engine**: Declarative pricing rules engine separate from billing execution
+- **Deployment-Aware Pricing**: Shared SaaS, Partner-deployed, Self-hosted with inheritance/override
+- **Auditability & Override Safety**: Versioned, auditable, and reversible pricing overrides
 
 ### API Endpoints
-- `GET /` - API info
-- `GET /health` - Health check
-- `POST /api/v1/metrics` - Record metric
-- `GET /api/v1/metrics?tenantId=` - List metrics
-- `POST /api/v1/query` - Execute flexible query
-- `GET /api/v1/reports?tenantId=` - List reports
-- `POST /api/v1/dashboards` - Create dashboard
-- `POST /api/v1/export` - Export data
+**Pricing:**
+- `POST /api/v1/pricing/models` - Create pricing model
+- `GET /api/v1/pricing/models` - List pricing models
+- `POST /api/v1/pricing/models/:id/rules` - Create pricing rule
+- `POST /api/v1/pricing/calculate` - Calculate price
+- `POST /api/v1/pricing/scopes` - Create pricing scope
+- `POST /api/v1/pricing/overrides` - Create override
 
-## Available Capability: CB-3 Content Management
+**Billing:**
+- `POST /api/v1/billing/cycles` - Create billing cycle
+- `GET /api/v1/billing/cycles/:id/summary` - Get cycle summary
+- `POST /api/v1/billing/cycles/:id/items` - Add billing item
+- `GET /api/v1/billing/audit` - Search audit logs
 
+## Completed Capabilities (Wave 1)
+
+### CB-2 Reporting & Analytics
+Located at: `implementations/CB-2_REPORTING_ANALYTICS_CAPABILITY/`
+- Data aggregation engine, flexible query API, 10 pre-built reports
+- Dashboard framework with 5 widget types, multi-format export
+
+### CB-3 Content Management
 Located at: `implementations/CB-3_CONTENT_MANAGEMENT_CAPABILITY/`
-
-### Features
-- Flexible schema-driven content model (11 field types)
-- Media management with validation
-- Version history for all content
-- Configurable workflows (3 system workflows)
-- Multi-language localization support
+- Flexible content model, media management, versioning, workflows, localization
 
 ## Technology Stack
 
@@ -42,17 +47,26 @@ Located at: `implementations/CB-3_CONTENT_MANAGEMENT_CAPABILITY/`
 - **Language**: TypeScript 5.x
 - **Framework**: Express.js 4.x
 - **Database**: PostgreSQL (Replit Postgres)
-- **Export Libraries**: ExcelJS, PDFKit
+- **Decimal Math**: Decimal.js
+- **Date Handling**: date-fns
 
 ## Platform Invariants Enforced
 
-- **INV-002**: Strict tenant isolation (all tables have tenant_id, all queries filter by tenant)
-- **INV-005**: Partner-led operating model (partners can create custom reports, dashboards)
-- **INV-011**: Prompts-as-Artifacts execution (documented in governance docs)
+- **INV-001**: Pricing Flexibility - data-driven, declarative pricing
+- **INV-002**: Tenant Isolation - all operations scoped by tenant_id
+- **INV-005**: Partner-led operating model
+- **INV-011**: Prompts-as-Artifacts execution
+- **INV-012**: Single-Repository Topology
 
 ## Development
 
 ```bash
+# CS-4 Pricing & Billing
+cd implementations/cs4-pricing-billing-service
+npm install
+npm run dev   # Runs on port 5000
+npm test      # 53 tests
+
 # CB-2 Reporting & Analytics
 cd implementations/CB-2_REPORTING_ANALYTICS_CAPABILITY
 npm install
@@ -68,6 +82,13 @@ npm test      # 33 tests
 
 ## Architecture Documentation
 
+- [CS-4 Architecture](/docs/architecture/ARCH_CS4_PRICING_BILLING.md)
 - [CB-2 Architecture](/docs/architecture/ARCH_CB2_REPORTING_ANALYTICS.md)
 - [CB-3 Architecture](/docs/architecture/ARCH_CB3_CONTENT_MANAGEMENT.md)
 - [Master Control Board](/docs/governance/WEBWAKA_MASTER_CONTROL_BOARD.md)
+
+## Runbooks
+
+- [Configuring Pricing Models](/docs/runbooks/CS4_PRICING_MODELS.md)
+- [Managing Billing Cycles](/docs/runbooks/CS4_BILLING_CYCLES.md)
+- [Troubleshooting](/docs/runbooks/CS4_TROUBLESHOOTING.md)
