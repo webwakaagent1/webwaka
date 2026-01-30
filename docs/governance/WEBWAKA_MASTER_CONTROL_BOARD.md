@@ -2,8 +2,8 @@
 
 **CANONICAL LIVING GOVERNANCE DOCUMENT**
 
-**Version:** 2.0 (Refactored from Lifecycle Checklist)  
-**LLast Updated: January 30, 20266  
+**Version:** 3.0 (PaA Model Ratified)  
+**Last Updated:** January 30, 2026  
 **Authority:** Founder
 
 > This document is the single source of truth for platform state, execution status, governance visibility, historical record, and forward roadmap. No other document should attempt to summarize the platform lifecycle at this level. Any activity not reflected here is considered unofficial.
@@ -69,6 +69,7 @@ Every tracked item must clearly indicate its position across these seven axes:
 *   **INV-008: Update Policy as Governed Lifecycle.** Updates must be opt-in, policy-driven, auditable, and reversible. Self-hosted clients control timing and scope, while WebWaka guarantees security, integrity, compatibility, and rollback safety. All instances must declare an Update Channel Policy (auto-update, manual-approval, or frozen). Critical security patches may be forcibly applied regardless of update channel.
 *   **INV-009: AI as Optional Pluggable Capability.** AI is treated as a pluggable, optional, configurable platform capability, never a hard dependency. The platform must support multiple AI models, multiple billing models, and multiple ownership models simultaneously. Bring Your Own Keys (BYOK) is supported at all actor levels. AI pricing is flexible and configurable per actor. AI is accessed via abstract capability contracts, never directly. Core workflows must function without AI, and no AI dependency may block critical operations.
 *   **INV-010: Realtime as Optional Degradable Capability.** Nothing in WebWaka may require realtime connectivity to function correctly. Realtime enhances experiences—it must never gate correctness, safety, or transaction completion. The platform must support four realtime interaction classes (Live Presence, Event Streaming, Low-Latency Interactions, Critical Transactions). Every realtime feature must define its fallback behavior. Realtime loss must degrade UX, never break correctness.
+*   **INV-011: Prompts-as-Artifacts (PaA) Execution.** All work must be initiated via a version-controlled, embedded Execution Prompt within a canonical governance document. Ad-hoc, chat-based instructions are non-binding. Execution is not complete until all artifacts are committed and the originating prompt is updated with backlinks. If it isn't documented in a prompt, it didn't happen.
 
 ---
 

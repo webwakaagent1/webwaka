@@ -1,0 +1,117 @@
+# CB-2: Reporting & Analytics Capability
+
+**Version:** 1.0  
+**Date:** January 30, 2026  
+**Author:** Manus AI  
+**Status:** ⚪ **Planned / Not Started**
+
+> **This document is subordinate to the Master Control Board.**
+
+---
+
+## 1. Core Objective
+
+To build a reusable reporting and analytics capability that provides partners and clients with insights into their business operations. This capability aggregates data from across the platform (sales, inventory, users, transactions) and provides a flexible query API, pre-built reports, and a dashboard framework that suites can consume.
+
+---
+
+## 2. Canonical Governance Reference
+
+*   **Master Control Board:** [§7.4 CB-2: Reporting & Analytics Capability](../governance/WEBWAKA_MASTER_CONTROL_BOARD.md#cb-2-reporting--analytics-capability)
+*   **Dependencies:** PF-1 (Foundational Extensions)
+
+---
+
+## 3. Key Features & Scope
+
+This capability will deliver the following features:
+
+| Feature | Description | Key Attributes |
+| :--- | :--- | :--- |
+| **Data Aggregation Engine** | Collects and aggregates data from all platform services. | Real-time and batch processing modes. |
+| **Flexible Query API** | Allows partners and clients to query aggregated data with filters, grouping, and sorting. | Supports custom report generation. |
+| **Pre-Built Reports** | A library of standard reports (sales summary, inventory status, user activity, financial overview). | Accelerates time-to-value for partners. |
+| **Dashboard Framework** | A reusable framework for building dashboards that suites can consume. | Provides charts, tables, and visualizations. |
+| **Export Functionality** | Allows data export to CSV, Excel, and PDF formats. | Supports offline analysis and compliance requirements. |
+
+---
+
+## 4. Architectural Principles & Alignment
+
+This capability must adhere to all 10 platform invariants, with particular emphasis on:
+
+| Invariant | Implementation in CB-2 |
+| :--- | :--- |
+| **INV-002: Strict Tenant Isolation** | All reports and analytics are strictly isolated by tenant. |
+| **INV-005: Partner-Led Operating Model** | Partners can create and manage their own custom reports without WebWaka intervention. |
+
+---
+
+## 5. Execution Readiness
+
+*   **Status:** ✅ **Fully Specifiable Now**
+*   **Blockers:** None
+
+---
+
+## 6. Deliverables
+
+*   **Code:**
+    *   Data aggregation engine
+    *   Flexible query API
+    *   Library of pre-built reports
+    *   Dashboard framework
+    *   Export functionality (CSV, Excel, PDF)
+*   **Documentation:**
+    *   Architecture decision records for reporting design
+    *   API documentation for query API
+    *   Report creation guide for partners
+
+---
+
+## 🚀 EXECUTION PROMPT: Implement Reporting & Analytics Capability (CB-2)
+
+**Objective:** Build a reusable reporting and analytics capability that provides partners and clients with insights into their business operations.
+
+**Scope:**
+- Data aggregation engine with real-time and batch processing modes
+- Flexible query API with filters, grouping, sorting, and pagination
+- Library of at least 10 pre-built reports (sales summary, inventory status, user activity, financial overview, top products, customer segments, etc.)
+- Dashboard framework with charts, tables, and visualizations
+- Export functionality to CSV, Excel, and PDF formats
+
+**Non-Goals:**
+- User-facing dashboards (those belong in suites)
+- AI-powered predictive analytics (that is PF-3)
+- External data integration (future enhancement)
+
+**Canonical Governance:**
+- **Master Control Board:** [§7.4 CB-2: Reporting & Analytics Capability](../governance/WEBWAKA_MASTER_CONTROL_BOARD.md#cb-2-reporting--analytics-capability)
+- **Dependencies:** PF-1 (Foundational Extensions)
+- **Platform Invariants:** INV-002, INV-005
+
+**Deliverables:**
+1. Data aggregation engine deployed and operational
+2. Flexible query API with comprehensive test coverage
+3. Library of at least 10 pre-built reports
+4. Dashboard framework with at least 5 standard visualizations (line chart, bar chart, pie chart, table, KPI card)
+5. Comprehensive test coverage (unit, integration, and end-to-end tests)
+
+**Required Documentation Outputs:**
+- Architecture decision records (ADRs) for reporting design, data aggregation strategy, and visualization framework
+- API documentation for query API
+- Report creation guide for partners
+
+**Output:** All technical architecture and implementation details must be documented in a new `ARCH_CB2_REPORTING_ANALYTICS.md` file within the `/docs/architecture` directory. Link this new document back to this section upon completion.
+
+---
+
+## 7. Status & History
+
+| Date | Status | Notes |
+| :--- | :--- | :--- |
+| January 30, 2026 | ⚪ Planned / Not Started | Phase defined with embedded execution prompt. Awaiting execution assignment. |
+
+---
+
+**End of Document**
