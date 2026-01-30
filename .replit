@@ -15,27 +15,23 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "WebWaka API"
+args = "CB-3 Content Management"
 
 [[workflows.workflow]]
-name = "WebWaka API"
+name = "CB-3 Content Management"
 author = "agent"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "cd implementations/pf1-foundational-extensions && npm run dev"
-waitForPort = 5000
 
 [workflows.workflow.metadata]
 outputType = "webview"
 
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd implementations/CB-3_CONTENT_MANAGEMENT_CAPABILITY && npm run dev"
+waitForPort = 5000
+
 [[ports]]
 localPort = 5000
 externalPort = 80
-
-[[ports]]
-localPort = 5001
-externalPort = 3001
 
 [deployment]
 deploymentTarget = "autoscale"
