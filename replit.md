@@ -4,33 +4,30 @@
 
 WebWaka B2B SaaS platform with multi-tenancy, implementing reusable capabilities and core services following the Prompts-as-Artifacts (PaA) governance model.
 
-## Active Service: CS-4 Pricing & Billing Service
+## Active Capability: CB-4 Inventory Management
 
-Located at: `implementations/cs4-pricing-billing-service/`
+Located at: `implementations/cb4-inventory-management/`
 
 ### Features
-- **Multi-Actor Pricing Authority**: Super Admin, Partners, Clients, Merchants, Agents, Staff
-- **Composable Pricing Models**: Flat, Usage-Based, Tiered, Subscription, Revenue-Share, Hybrid
-- **Decoupled Billing Engine**: Declarative pricing rules engine separate from billing execution
-- **Deployment-Aware Pricing**: Shared SaaS, Partner-deployed, Self-hosted with inheritance/override
-- **Auditability & Override Safety**: Versioned, auditable, and reversible pricing overrides
+- **Core Inventory Service**: Products, SKUs, stock levels, multi-location support
+- **Inventory Strategies**: FIFO, LIFO, Average Cost, Specific Identification
+- **Channel Subscription**: Real-time event-based synchronization to sales channels
+- **Stock Operations**: Receive, Sell, Adjust, Transfer, Reserve
+- **Full Auditability**: Complete audit trail for all inventory movements
 
 ### API Endpoints
-**Pricing:**
-- `POST /api/v1/pricing/models` - Create pricing model
-- `GET /api/v1/pricing/models` - List pricing models
-- `POST /api/v1/pricing/models/:id/rules` - Create pricing rule
-- `POST /api/v1/pricing/calculate` - Calculate price
-- `POST /api/v1/pricing/scopes` - Create pricing scope
-- `POST /api/v1/pricing/overrides` - Create override
+**Products:** `/api/v1/products`
+**Locations:** `/api/v1/locations`
+**Inventory:** `/api/v1/inventory/stock`, `/receive`, `/sell`, `/adjust`, `/movements`, `/transfers`, `/reservations`
+**Channels:** `/api/v1/channels`, `/subscriptions`, `/events`
+**Audit:** `/api/v1/audit`
 
-**Billing:**
-- `POST /api/v1/billing/cycles` - Create billing cycle
-- `GET /api/v1/billing/cycles/:id/summary` - Get cycle summary
-- `POST /api/v1/billing/cycles/:id/items` - Add billing item
-- `GET /api/v1/billing/audit` - Search audit logs
+## Completed Services & Capabilities
 
-## Completed Capabilities (Wave 1)
+### CS-4 Pricing & Billing Service
+Located at: `implementations/cs4-pricing-billing-service/`
+- Multi-actor pricing authority, 6 composable pricing models
+- Decoupled billing engine, deployment-aware pricing, auditable overrides
 
 ### CB-2 Reporting & Analytics
 Located at: `implementations/CB-2_REPORTING_ANALYTICS_CAPABILITY/`
@@ -61,6 +58,12 @@ Located at: `implementations/CB-3_CONTENT_MANAGEMENT_CAPABILITY/`
 ## Development
 
 ```bash
+# CB-4 Inventory Management
+cd implementations/cb4-inventory-management
+npm install
+npm run dev   # Runs on port 5000
+npm test      # 35 tests
+
 # CS-4 Pricing & Billing
 cd implementations/cs4-pricing-billing-service
 npm install
@@ -82,6 +85,7 @@ npm test      # 33 tests
 
 ## Architecture Documentation
 
+- [CB-4 Architecture](/docs/architecture/ARCH_CB4_INVENTORY_MANAGEMENT.md)
 - [CS-4 Architecture](/docs/architecture/ARCH_CS4_PRICING_BILLING.md)
 - [CB-2 Architecture](/docs/architecture/ARCH_CB2_REPORTING_ANALYTICS.md)
 - [CB-3 Architecture](/docs/architecture/ARCH_CB3_CONTENT_MANAGEMENT.md)
@@ -89,10 +93,12 @@ npm test      # 33 tests
 
 ## API Documentation
 
+- [CB-4 Inventory API](/docs/api/CB4_INVENTORY_API.md)
 - [CS-4 Pricing & Billing API](/docs/api/CS4_PRICING_BILLING_API.md)
 
 ## Runbooks
 
-- [Configuring Pricing Models](/docs/runbooks/CS4_PRICING_MODELS.md)
-- [Managing Billing Cycles](/docs/runbooks/CS4_BILLING_CYCLES.md)
-- [Troubleshooting](/docs/runbooks/CS4_TROUBLESHOOTING.md)
+- [CB-4 Inventory Operations](/docs/runbooks/CB4_INVENTORY_OPERATIONS.md)
+- [CS-4 Pricing Models](/docs/runbooks/CS4_PRICING_MODELS.md)
+- [CS-4 Billing Cycles](/docs/runbooks/CS4_BILLING_CYCLES.md)
+- [CS-4 Troubleshooting](/docs/runbooks/CS4_TROUBLESHOOTING.md)
