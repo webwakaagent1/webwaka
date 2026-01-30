@@ -311,7 +311,10 @@ Every action is logged with:
 
 ## 9. API Reference
 
-### 9.1. Pricing Endpoints
+For complete API documentation including request/response schemas, see:
+**[CS4 Pricing & Billing API Documentation](/docs/api/CS4_PRICING_BILLING_API.md)**
+
+### 9.1. Pricing Endpoints Summary
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -330,7 +333,7 @@ Every action is logged with:
 | POST | `/api/v1/pricing/overrides/:id/approve` | Approve override |
 | POST | `/api/v1/pricing/overrides/:id/deactivate` | Deactivate override |
 
-### 9.2. Billing Endpoints
+### 9.2. Billing Endpoints Summary
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|

@@ -87,6 +87,10 @@ npm test      # 33 tests
 - [CB-3 Architecture](/docs/architecture/ARCH_CB3_CONTENT_MANAGEMENT.md)
 - [Master Control Board](/docs/governance/WEBWAKA_MASTER_CONTROL_BOARD.md)
 
+## API Documentation
+
+- [CS-4 Pricing & Billing API](/docs/api/CS4_PRICING_BILLING_API.md)
+
 ## Runbooks
 
 - [Configuring Pricing Models](/docs/runbooks/CS4_PRICING_MODELS.md)
