@@ -2,11 +2,13 @@
 
 **CANONICAL LIVING GOVERNANCE DOCUMENT**
 
-**Version:** 4.0 (Wave 1 Complete)  
+**Version:** 4.1 (Wave 2 Authorized)  
 **Last Updated:** January 30, 2026  
 **Authority:** Founder
 
 > **Wave 1 Execution Complete:** All five Wave 1 phases (CS-1, CS-2, CS-3, CB-2, CB-3) have been implemented, verified, and are now operational. The platform has achieved a significant milestone in its core service and capability layers.
+
+> **Wave 2 Authorized:** PF-2 (Realtime & Eventing Infrastructure) and CS-4 (Pricing & Billing Service) have been authorized for parallel execution as Wave 2. Both phases have v2 PaA execution prompts and are ready for dispatch.
 
 > **Repository Topology Decision:** The Founder has ratified a single-repository (monorepo) topology for all platform development. All execution work must occur in the `webwaka` repository under `/implementations/<phase-id>/`. This decision is binding until formally superseded after completion of all Wave 1 phases.
 
@@ -282,7 +284,7 @@ This section tracks planned, but not yet started, phases.
 
 | Axis | Value |
 | :--- | :--- |
-| **Status** | ⚪ **Planned / Not Started** |
+| **Status** | 🟡 **Authorized for Execution (Wave 2)** |
 | **Platform Layer** | Core Services, Capabilities |
 | **Deployment Mode** | All |
 | **Actor Scope** | All |
@@ -290,9 +292,11 @@ This section tracks planned, but not yet started, phases.
 | **Geographic Assumption** | Global-Ready |
 | **Execution Ownership** | Internal |
 | **Risk Class** | Infrastructure |
-| **Dependencies** | PF-1 |
+| **Dependencies** | PF-1 (🟢 Complete) |
 | **Execution Readiness** | ✅ Fully specifiable now |
 | **Blockers** | None (Decision 8 resolved) |
+| **Assigned Platform** | Manus |
+| **Execution Wave** | Wave 2 |
 | **Objective** | Implement optional, degradable realtime infrastructure (WebSocket services, event bus, offline reconciliation) with four interaction classes: Class A (Live Presence—optional, non-critical), Class B (Event Streaming—realtime preferred, async fallback required), Class C (Low-Latency Interactions—realtime required for experience, not correctness), Class D (Critical Transactions—realtime explicitly NOT allowed). Every realtime feature must define fallback behavior (event queue, polling, delayed reconciliation, snapshot refresh, async confirmation). Realtime loss must degrade UX, never break correctness. |
 
 #### PF-3: AI & High-Complexity Readiness
@@ -376,33 +380,22 @@ This section tracks planned, but not yet started, phases.
 
 | Axis | Value |
 | :--- | :--- |
+| **Status** | 🟡 **Authorized for Execution (Wave 2)** |
 | **Phase ID** | CS-4 |
 | **Phase Name** | Pricing & Billing Service |
-| **Objective** | Implement a flexible, data-driven pricing engine |
-| **Platform Layer** | Core Services |
-| **Deployment Mode** | All |
-| **Actor Scope** | All |
-| **Connectivity Mode** | All |
-| **Geographic Assumption** | Nigeria-First |
-| **Execution Ownership** | Internal |
-| **Risk Class** | Business Logic |
-| **Dependencies** | PF-1 |
-| **Execution Readiness** | 🟡 Partially specifiable |
-| **Blockers** | Detailed pricing models for each suite |
-
-| Axis | Value |
-| :--- | :--- |
-| **Status** | ⚪ **Planned / Not Started** |
+| **Objective** | Implement a flexible, data-driven pricing engine based on binding pricing architecture principles |
 | **Platform Layer** | Core Services |
 | **Deployment Mode** | All |
 | **Actor Scope** | All |
 | **Connectivity Mode** | Fully Online |
 | **Geographic Assumption** | Nigeria-First |
 | **Execution Ownership** | Internal |
-| **Risk Class** | Security |
-| **Dependencies** | Phase 2B (Complete) |
+| **Risk Class** | Business Logic |
+| **Dependencies** | PF-1 (🟢 Complete) |
 | **Execution Readiness** | ✅ Fully specifiable now |
-| **Blockers** | None |
+| **Blockers** | None (Pricing principles provided by Founder) |
+| **Assigned Platform** | Replit |
+| **Execution Wave** | Wave 2 |
 
 ### 7.4. Capability Build-Out Phases
 
